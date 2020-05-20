@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+     Name: Qing Nie
+     Date: Aug 21, 2019
+     Section: CSE 154 AB
+
+     This is main.html page from final project, a guitar e-commerce store selling
+     guitars and accessories and providing good customer experience
+-->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet" />
+    <script src="main.js"></script>
+    <title>Boyfriend Guitar Shop</title>
+  </head>
+  <body>
+    <header class="flex">
+      <h1>BF Guitar Shop</h1>
+      <section class="flex">
+        <nav>
+          <ul class="flex">
+            <li id="featured" class="active">Featured</li>
+            <li id="all" class="product-tab">All</li>
+            <li id="acoustic-guitar" class="product-tab">Acoustic</li>
+            <li id="electric-guitar" class="product-tab">Electric</li>
+            <li id="accessory" class="product-tab">Accessories</li>
+            <li id="diy">DIY</li>
+          </ul>
+        </nav>
+        <img id="shopping-cart" src="img/shopping-cart.png" alt="cart" />
+      </section>
+    </header>
+    <hr>
+    <h2 id="error" class="center hidden"></h2>
+    <main>
+      <section id="featured-view" class="active-view">
+        <h2 class="center">Featured Guitars</h2>
+        <section class="flex center">
+          <img id="product1" src="img/acoustic-black.png" alt="Acoustic guitar" />
+          <img id="product2" src="img/e-guitar-orange.png" alt="Electric guitar" />
+        </section>
+        <h2>Featured Accessories</h2>
+        <section class="flex center">
+          <img id="product3" src="img/pick-blue.png" alt="Guitar pick" />
+          <img id="product4" src="img/strap.png" alt="Guitar strap" />
+        </section>
+      </section>
+      <section id="product-view" class="hidden"></section>
+      <section id="buy-view" class="hidden flex">
+        <img id="buy-img" src="img/acoustic-black.png" alt="Acoustic guitar">
+        <section>
+          <p id="product-name"></p>
+          <p id="product-price"></p>
+          <section id="cart-button-section">
+            <button id="add-to-cart">Add to cart</button>
+          </section>
+          <p id="cart-msg" class="hidden">Added to Cart!</p>
+          <p>Characteristics</p>
+          <ul id="product-char"></ul>
+        </section>
+      </section>
+      <section id="diy-view" class="center hidden">
+        <h2>DIY your Guitar</h2>
+        <h3 class="hidden"></h3>
+        <form id="diy-form">
+          <h3>Guitar type:</h3>
+          <div id="diy-type" class="flex">
+            <p>Electric </p>
+            <input type="radio" name="type" value="electric" required />
+            <p>Acoustic </p>
+            <input type="radio" name="type" value="acoustic" required />
+          </div>
+          <h3>Guitar neck material</h3>
+          <select name="neck">
+            <option value="Mahogany">Mahogany</option>
+            <option value="Spruce">Spruce</option>
+            <option value="Poplar">Poplar</option>
+          </select>
+          <h3>Guitar body material</h3>
+          <select name="body">
+            <option value="Mahogany">Mahogany</option>
+            <option value="Maple">Maple</option>
+            <option value="Rosewood">Rosewood</option>
+          </select>
+          <h3>Guitar color</h3>
+          <select name="color">
+            <option value="red">Red</option>
+            <option value="black">Black</option>
+            <option value="orginal">Original</option>
+          </select>
+          <h3>Guitar engraving</h3>
+          <div id="if-engrave" class="flex">
+            <p>yes</p>
+            <input type="radio" name="engrave" value=1 required />
+            <p>no</p>
+            <input type="radio" name="engrave" value=0 required />
+          </div>
+          <section id="engraving-text" class="hidden">
+            <p>Please write the engraving text</p>
+            <input type="text" name="engrave-text" />
+          </section>
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </section>
+      <section id="faq-view" class="hidden">
+        <h2>Frequently asked questions</h2>
+        <section id="faq-list"></section>
+        <form id="faq-form" class="center">
+          <h3>Provide Your Feedback!</h3>
+          <input type="text" name="name" placeholder="Your First and Last Name" required />
+          <textarea rows="10" cols="100" name="feedback"
+           placeholder="Please Leave Your Feedbacks Here!" required></textarea>
+          <button type="submit" id="faq-submit">Submit</button>
+        </form>
+        <h3 class="hidden"></h3>
+      </section>
+      <section id="cart-view" class="hidden">
+        <section id="cart-sum" class="flex">
+          <h2>Total Price: <span id="total-price">$0</span></h2>
+          <button id="submit-order" disabled>Submit Order</button>
+        </section>
+        <p id="cart-empty-msg" class="center">Your cart is empty!</p>
+        <p id="order-placed-msg" class="center hidden">
+          Your order has been placed. We will ship your item(s) ASAP!
+        </p>
+      </section>
+    </main>
+    <footer class="flex center">
+      <p>All rights reserved @BF Guitar Shop</p>
+      <p>|</p>
+      <p id="FAQ">FAQ</p>
+      <p>|</p>
+      <p><a href="citation.txt" download>Citation</a></p>
+    </footer>
+  </body>
+</html>

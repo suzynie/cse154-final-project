@@ -1,0 +1,274 @@
+/**
+ * NAME: Qing Nie
+ * DATE: Aug 21, 2019
+ * SECTION/TA: AB/Tal
+ *
+ * This is styles.css file that describes the structures and styles such as
+ * width, margin, font size and flex properties for the guitar e-commerce store
+ * in main.html.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Crimson+Text&display=swap');
+
+.flex {
+  display: flex;
+}
+
+.center {
+  text-align: center;
+}
+
+header, nav > ul, .cart-item, #cart-sum {
+  justify-content: space-between;
+}
+
+header, #featured-view, .invent hr, #faq-view {
+  width: 85%;
+}
+
+header, #diy-view, #featured-view, #faq-view, #cart-sum {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, header li, button, #shopping-cart, .invent, #FAQ {
+  cursor: pointer;
+}
+
+header li::after, button:hover {
+  background-color: #618985;
+}
+
+#diy-view, #featured-view, #buy-view, #product-view {
+  margin-top: 40px;
+}
+
+#featured-view > section, #diy-type, #if-engrave, .row {
+  justify-content: space-around;
+}
+
+header {
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Dancing script", cursive;
+}
+
+header > section, #diy-type, #if-engrave, .cart-item {
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  align-items: flex-end;
+}
+
+header li {
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+header li::after {
+  content: "";
+  width: 0%;
+  transition: all 0.5s ease-in-out;
+}
+
+header li::after, header li.active::after {
+  height: 2px;
+}
+
+button {
+  width: 32%;
+  border-radius: 4%;
+  background-color: #50716D;
+  padding: 4px;
+}
+
+header li:hover::after, header li.active::after, #faq-form input, textarea, #add-to-cart {
+  width: 100%;
+}
+
+#shopping-cart {
+  width: 30px;
+  max-height: 30px;
+  margin-left: 22px;
+}
+
+#featured-view > section {
+  border: 4px solid #A9C7C7;
+  margin-bottom: 10%;
+  padding: 2% 0;
+}
+
+#featured-view > section > img, #diy-view {
+  width: 30%;
+  height: 30%;
+}
+
+.cart-item img {
+  width: 10%;
+  height: 10%
+}
+
+#featured-view h2 {
+  border: 4px solid #96BBBB;
+  border-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #96BBBB;
+  margin: 0;
+}
+
+#featured-view h2, footer, button, select:not(:checked) {
+  color: white;
+}
+
+button[disabled=disabled], button:disabled {
+  background-color: #c6d9d9;
+}
+
+textarea, #faq-form input {
+  font-size: 14pt;
+}
+
+#cart-msg {
+  color: green;
+}
+
+footer {
+  background-color: #C5D9D9;
+  padding: 100px;
+}
+
+footer > p, .cart-item, #faq-submit {
+  margin: 10px;
+}
+
+hr {
+  width: 94%;
+}
+
+header li.active::after, header li::after {
+  bottom: 0;
+  left: 0;
+}
+
+header li.active::after, header li::after {
+  display: block;
+}
+
+.cart-item {
+  padding: 20px;
+}
+
+#buy-view, #diy-view, #product-view, .row, #engraving-text {
+  margin-bottom: 40px;
+}
+
+#buy-view, footer {
+  justify-content: center;
+}
+
+#buy-img {
+  height: 25%;
+}
+
+#buy-img, .invent {
+  width: 25%;
+}
+
+#buy-view ul {
+  list-style: kannada;
+  padding-left: 20px;
+}
+
+#buy-view img {
+  margin-right: 100px;
+}
+
+#product-name, #faq-view h2 {
+  font-size: 24pt;
+}
+
+#product-price {
+  margin-bottom: 60px;
+}
+
+#product-price, #faq-view p {
+  font-size: 16pt;
+}
+
+select, button {
+  font-size: 12pt;
+}
+
+#product-view {
+  justify-content: space-evenly;
+}
+
+.invent, #faq-view div, .cart-item {
+  border: 4px dashed #CFDFDF;
+}
+
+.invent img{
+  width: 80%;
+}
+
+.invent img, #featured-view h2 {
+  padding: 10px;
+}
+
+.invent hr {
+  border-bottom: 3px solid #618985;
+}
+
+button {
+  border: 0;
+}
+
+#faq-view h2 {
+  color: #243231;
+}
+
+#faq-view h2, #faq-view p, h2, h3 {
+  font-family: "Crimson Text", sans-serif;
+}
+
+#faq-view div {
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+#faq-form input {
+  margin-bottom: 10px;
+}
+
+#faq-view p {
+  margin-top: 10px;
+}
+
+#cart-empty-msg {
+  font-size: 20pt;
+}
+
+#cart-sum {
+  width: 95%;
+}
+
+select {
+   background-color: #7FC4BE;
+   border: 7px solid transparent;
+}
+
+#faq-form input, textarea {
+  border: 2px solid #7FC4BE;
+  box-shadow: 0 0 2px #7FC4BE;
+}
+
+.hidden {
+  display: none;
+}
